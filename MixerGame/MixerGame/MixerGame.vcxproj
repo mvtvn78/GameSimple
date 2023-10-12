@@ -137,7 +137,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Asset\AssetManager.cpp" />
+    <ClCompile Include="ECS\ECS.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="ECS\TextureManager.cpp" />
+    <ClCompile Include="ECS\Vector2D.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Asset\AssetManager.h" />
+    <ClInclude Include="ECS\ECS.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="ECS\TextureManager.h" />
+    <ClInclude Include="ECS\Vector2D.h" />
+    <ClInclude Include="Game\main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

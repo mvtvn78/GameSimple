@@ -1,2 +1,8 @@
-﻿  main.cpp
+﻿  AssetManager.cpp
+  ECS.cpp
+  Game.cpp
+  TextureManager.cpp
+  Vector2D.cpp
+  main.cpp
+  Generating Code...
   MixerGame.vcxproj -> F:\Working\GIT\MixerGame\MixerGame\x64\Debug\MixerGame.exe

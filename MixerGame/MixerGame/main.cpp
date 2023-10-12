@@ -1,7 +1,15 @@
-#include<iostream>
-#include<SDL.h>
-int main(int args,char* argv[])
+#include"./Game/main.h"
+int main(int args, char* argv[])
 {
-	std::cout << "Hello World" << std::endl;
+	Game* game = new Game();
+	game->init("Mvt", 800, 480, 0);
+	while (game->isRunning())
+	{
+		game->handleEvent();
+		game->Update();
+		game->Render();
+		game->frame();
+	}
+	game->close();
 	return 0;
 }
