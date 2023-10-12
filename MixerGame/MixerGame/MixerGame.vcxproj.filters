@@ -33,6 +33,9 @@
     <ClCompile Include="Asset\AssetManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Componnet\Collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECS\ECS.h">
@@ -51,6 +54,30 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Game\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\Components.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\TransformComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\SpriteComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\ColliderComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\Collision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\KeyboardController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Componnet\TileComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

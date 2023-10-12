@@ -28,4 +28,5 @@ public:
 	void close();
 	bool isRunning();
 	void frame();
+	void GameRun();
 };

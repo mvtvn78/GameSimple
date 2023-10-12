@@ -138,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Asset\AssetManager.cpp" />
+    <ClCompile Include="Componnet\Collision.cpp" />
     <ClCompile Include="ECS\ECS.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="ECS\TextureManager.cpp" />
@@ -146,6 +147,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asset\AssetManager.h" />
+    <ClInclude Include="Componnet\Animation.h" />
+    <ClInclude Include="Componnet\ColliderComponent.h" />
+    <ClInclude Include="Componnet\Collision.h" />
+    <ClInclude Include="Componnet\Components.h" />
+    <ClInclude Include="Componnet\KeyboardController.h" />
+    <ClInclude Include="Componnet\SpriteComponent.h" />
+    <ClInclude Include="Componnet\TileComponent.h" />
+    <ClInclude Include="Componnet\TransformComponent.h" />
     <ClInclude Include="ECS\ECS.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="ECS\TextureManager.h" />

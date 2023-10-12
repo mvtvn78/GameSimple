@@ -5,6 +5,8 @@ SDL_Texture* TextureManager::loadTexture(const char* fileName)
 	SDL_Surface* tmp = IMG_Load(fileName);
 	SDL_Texture* tex = SDL_CreateTextureFromSurface(Game::windowRender, tmp);
 	SDL_FreeSurface(tmp);
+	if (tex == NULL)
+		std::cout << "NOT FOUND Path " << fileName << std::endl;
 	return tex;
 }
 

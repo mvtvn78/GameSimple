@@ -2,7 +2,7 @@
 int main(int args, char* argv[])
 {
 	Game* game = new Game();
-	game->init("Mvt", 800, 480, 0);
+	game->init("Mvt", WIDTHSCREEN,HEIGHTSCREEN, 0);
 	while (game->isRunning())
 	{
 		game->handleEvent();

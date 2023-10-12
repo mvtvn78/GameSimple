@@ -1,6 +1,8 @@
 #include"Game.h"
 #include<iostream>
 #include"../Asset/AssetManager.h"
+#include"../ECS/ECS.h"
+#include"../Componnet/Components.h"
 SDL_Renderer* Game::windowRender = NULL;
 SDL_Event Game::events;
 
@@ -80,14 +82,17 @@ void Game::init(const char* title, int width, int heigh, bool isFullscreen)
 				SDL_SetRenderDrawColor(windowRender, 255, 255, 255, 255);
 			}
 		}
-		/*asset->AddTexture("terran", "terrain_ss.png");
-		asset->AddTexture("player", "player_idle.png");
-		asset->AddTexture("enemy", "enemy.png");*/
-		/*map = new Map("terran", 2, 32);
-		map->LoadMap("map.map", 25, 20);*/
+		GameRun();
 	}
 }
-
+void Game::GameRun()
+{
+	asset->AddTexture("terran", "terrain_ss.png");
+	asset->AddTexture("player", "player_idle.png");
+	asset->AddTexture("enemy", "enemy.png");
+	/*map = new Map("terran", 2, 32);
+	map->LoadMap("map.map", 25, 20);*/
+}
 void  Game::handleEvent()
 {
 	SDL_PollEvent(&events);
