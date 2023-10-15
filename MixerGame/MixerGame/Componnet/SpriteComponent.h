@@ -29,10 +29,8 @@ public:
 	SpriteComponent(std::string id, bool isAnimated)
 	{
 		animated = isAnimated;
-		Animation idle = Animation(0, 3, 100);
-		Animation walk = Animation(1, 8, 100);
+		Animation idle = Animation(0, 10, 100);
 		animations.emplace("Idle", idle);
-		animations.emplace("Walk", walk);
 		Play("Idle");
 		setText(id);
 	}
@@ -58,8 +56,8 @@ public:
 			srcRect.x = srcRect.w * static_cast<int>((SDL_GetTicks() / speed) % frames);
 		}
 		srcRect.y = animIndex * transform->height;
-		destRect.x = static_cast<int>(transform->position.x) /*- Init::camera.x*/;
-		destRect.y = static_cast<int>(transform->position.y) /*- Init::camera.y*/;
+		destRect.x = static_cast<int>(transform->position.x) - Game::camera.x;
+		destRect.y = static_cast<int>(transform->position.y) - Game::camera.y;
 		destRect.w = transform->width * transform->scale;
 		destRect.h = transform->width * transform->scale;
 	}
