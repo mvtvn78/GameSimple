@@ -12,7 +12,7 @@ public:
 	int width = 32;
 	int height = 32;
 	int scale = 1;
-	int speed = 3;
+	int speed = 10;
 	TransformComponent()
 	{
 		position.Zero();
@@ -34,8 +34,8 @@ public:
 	{
 		scale = _scale;
 		//Center player
-		position.x = WIDTHSCREEN / 2;
-		position.y = HEIGHTSCREEN / 2;
+		position.x = WIDTHSCREEN/2;
+		position.y = HEIGHTSCREEN/2;
 	}
 	void init()override
 	{
