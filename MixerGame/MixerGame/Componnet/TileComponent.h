@@ -33,8 +33,8 @@ public:
 	}
 	void updateComponnet() override
 	{
-		destRect.x = position.x /*- Init::camera.x*/;
-		destRect.y = position.y /*- Init::camera.y*/;
+		destRect.x = position.x - Game::camera.x;
+		destRect.y = position.y - Game::camera.y;
 	}
 	void drawComponnet() override
 	{

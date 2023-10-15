@@ -33,16 +33,13 @@ public:
 			entity->addComponent<TransformComponent>();
 		}
 		transform = &entity->getComponet<TransformComponent>();
-
-		tex = TextureManager::loadTexture("assets/ColTex.png");
 		srcR = { 0,0,32,32 };
 		destR = { collider.x,collider.y,collider.w,collider.h };
-		/*Init::colliders.push_back(this);*/
 	}
 
 	void drawComponnet()
 	{
-		TextureManager::Draw(tex, srcR, destR, SDL_FLIP_NONE);
+		///*TextureManager::Draw(tex, srcR, destR, SDL_FLIP_NONE);*/
 	}
 	void updateComponnet() override
 	{
@@ -53,7 +50,7 @@ public:
 			collider.w = transform->width * transform->scale;
 			collider.h = transform->height * transform->scale;
 		}
-		destR.x = collider.x/* - Init::camera.x*/;
-		destR.y = collider.y /*- Init::camera.y*/;
+		destR.x = collider.x - Game::camera.x;
+		destR.y = collider.y - Game::camera.y;
 	}
 };
