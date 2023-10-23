@@ -33,22 +33,25 @@ public:
 			entity->addComponent<TransformComponent>();
 		}
 		transform = &entity->getComponet<TransformComponent>();
-		srcR = { 0,0,32,32 };
+		srcR = { 0,0,64,64};
 		destR = { collider.x,collider.y,collider.w,collider.h };
+		tex = TextureManager::loadTexture("F:\\Working\\GIT\\MixerGame\\MixerGame\\MixerGame\\Asset\\Element\\ColliderBug.png");
 	}
 
 	void drawComponnet()
 	{
-		///*TextureManager::Draw(tex, srcR, destR, SDL_FLIP_NONE);*/
+		TextureManager::Draw(tex, srcR, destR, SDL_FLIP_NONE);
 	}
 	void updateComponnet() override
 	{
 		if (tag != "terrain")
 		{
+			
 			collider.x = static_cast<int>(transform->position.x);
 			collider.y = static_cast<int>(transform->position.y);
 			collider.w = transform->width * transform->scale;
 			collider.h = transform->height * transform->scale;
+			
 		}
 		destR.x = collider.x - Game::camera.x;
 		destR.y = collider.y - Game::camera.y;
